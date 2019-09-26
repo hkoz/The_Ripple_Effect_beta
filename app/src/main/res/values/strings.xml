@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">The Ripple Effect</string>
+    <string name="title_activity_location">Location</string>
+    <string name="username">E-mail</string>
+    <string name="password">password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or_log_in">Or, Log In</string>
+    <string name="or_sign_up">Or, Sign Up</string>
+    <string name="guest">Enter as guest</string>
+    <string name="user_id_image">User ID image</string>
+    <string name="loggedIn">Logged In Successfully, welcome</string>
+    <string name="failed_log_in"> Failed to log in\nplease check your username or password</string>
+    <string name="signed_up">Signed Up Successfully, welcome</string>
+    <string name="failed_sign_up"> Failed to sign up\nplease check your username or password</string>
+    <string name="find_new_puddle">Find a new puddle</string>
+    <string name="log_out"> Log out</string>
+    <string name="create_new_puddle"> Create a new puddle</string>
+    <string name="create_new_ripple">Create a new ripple</string>
+</resources>

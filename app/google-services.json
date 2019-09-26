@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "582212515487",
+    "firebase_url": "https://mrhoney-29d47.firebaseio.com",
+    "project_id": "mrhoney-29d47",
+    "storage_bucket": "mrhoney-29d47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582212515487:android:157ff62558dedacb8e14aa",
+        "android_client_info": {
+          "package_name": "com.therippleeffect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582212515487-u6hcb2d3ii8dfgqrk8g5uphrh7g2pkt0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.therippleeffect",
+            "certificate_hash": "888daef5836e74a3c76d8342e3a44e21acfff347"
+          }
+        },
+        {
+          "client_id": "582212515487-tq6s718trtgbv4dqg81plnt4jh5sc9hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGjATDEYOsI3B1riu78Iahoi2SxZsrJCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582212515487-tq6s718trtgbv4dqg81plnt4jh5sc9hf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
