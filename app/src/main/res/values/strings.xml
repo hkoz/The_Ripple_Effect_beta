@@ -17,4 +17,21 @@
     <string name="log_out"> Log out</string>
     <string name="create_new_puddle"> Create a new puddle</string>
     <string name="create_new_ripple">Create a new ripple</string>
+    <string name="puddle_name">Puddle title: </string>
+    <string name="puddle_initiator_name">Initiator name: </string>
+    <string name="puddle_short_description">Short description: </string>
+    <string name="Accept">Accept</string>
+    <string name="status">Status: </string>
+    <string name="Location">Location: </string>
+    <string name="Date">Date created: </string>
+    <string name="Type">Type: </string>
+    <string name="Finish">Finish</string>
+    <string name="Ongoing">Ongoing</string>
+    <string name="Finished">Finished</string>
+    <string name="number_of_ripples_required">Number of ripples required: </string>
+    <string name="number_of_ripples_created">Number of ripples created: </string>
+    <string name="Credibility">Credibility: </string>
+    <string name="boost_credibility">Boost credibility</string>
+    <string name="image"> Images: </string>
+    <string name="view">View</string>
 </resources>

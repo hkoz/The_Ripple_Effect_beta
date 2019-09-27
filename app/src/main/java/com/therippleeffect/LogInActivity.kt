@@ -1,6 +1,7 @@
 package com.therippleeffect
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -60,9 +61,13 @@ class LogInActivity : AppCompatActivity() {
     private fun enterAsMember() {
         if (logInTrue) {
             Toast.makeText(this, getString(R.string.loggedIn), Toast.LENGTH_SHORT).show()
+            var myIntent = Intent (this, MyActivity::class.java)
+            startActivity(myIntent)
         }
         else {
             Toast.makeText(this, getString(R.string.signed_up), Toast.LENGTH_SHORT).show()
+            var myIntent = Intent (this, MyActivity::class.java)
+            startActivity(myIntent)
         }
     }
 
