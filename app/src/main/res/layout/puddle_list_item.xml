@@ -13,7 +13,8 @@
             android:layout_width="60dp"
             android:layout_height="70dp"
             tool:src="@drawable/ic_launcher_foreground"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -49,10 +50,28 @@
                         android:layout_height="wrap_content"
                         tool:text="shit" />
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:text="@string/puddle_short_description" />
+                    <TextView
+                        android:id="@+id/puddle_short_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="3"
+                        android:maxLength="100"
+                        tool:text="Blah Blah" />
+                </LinearLayout>
             </LinearLayout>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:text="@string/view"/>
     </LinearLayout>
 </FrameLayout>

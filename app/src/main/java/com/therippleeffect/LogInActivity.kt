@@ -34,41 +34,35 @@ class LogInActivity : AppCompatActivity() {
                         enterAsMember()
 
                     }
-                    else{ Toast.makeText(this, getString(R.string.failed_log_in), Toast.LENGTH_SHORT).show() }
+                    else Toast.makeText(this, getString(R.string.failed_log_in), Toast.LENGTH_SHORT).show()
                 }
             }
-            else
-            { Toast.makeText(this, getString(R.string.failed_log_in), Toast.LENGTH_SHORT).show() }
+            else Toast.makeText(this, getString(R.string.failed_log_in), Toast.LENGTH_SHORT).show()
 
     }
     fun signup(view: View) {
         var email = emailEditText?.text.toString()
         var password = passwordEditText?.text.toString()
-        if (emailEditText!= null && passwordEditText!=null && email != "" && password != ""){
-            mauth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { Task ->
-                if (Task.isSuccessful){
-                    logInTrue = false
-                    enterAsMember()
+        if (emailEditText!= null && passwordEditText!=null && email != "" && password != "") mauth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { Task ->
+            if (Task.isSuccessful){
+                logInTrue = false
+                enterAsMember()
 
-                }
-                else{ Toast.makeText(this, getString(R.string.failed_sign_up), Toast.LENGTH_SHORT).show() }
             }
+            else Toast.makeText(this, getString(R.string.failed_sign_up), Toast.LENGTH_SHORT).show()
         }
-        else
-        { Toast.makeText(this, getString(R.string.failed_sign_up), Toast.LENGTH_SHORT).show() }
+        else Toast.makeText(this, getString(R.string.failed_sign_up), Toast.LENGTH_SHORT).show()
 
     }
-    private fun enterAsMember() {
-        if (logInTrue) {
-            Toast.makeText(this, getString(R.string.loggedIn), Toast.LENGTH_SHORT).show()
-            var myIntent = Intent (this, MyActivity::class.java)
-            startActivity(myIntent)
-        }
-        else {
-            Toast.makeText(this, getString(R.string.signed_up), Toast.LENGTH_SHORT).show()
-            var myIntent = Intent (this, MyActivity::class.java)
-            startActivity(myIntent)
-        }
+    private fun enterAsMember() = if (logInTrue) {
+        Toast.makeText(this, getString(R.string.loggedIn), Toast.LENGTH_SHORT).show()
+        var myIntent = Intent (this, MyActivity::class.java)
+        startActivity(myIntent)
+    }
+    else {
+        Toast.makeText(this, getString(R.string.signed_up), Toast.LENGTH_SHORT).show()
+        var myIntent = Intent (this, MyActivity::class.java)
+        startActivity(myIntent)
     }
 
 }

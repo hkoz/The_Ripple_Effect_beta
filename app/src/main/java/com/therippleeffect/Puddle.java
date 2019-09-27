@@ -14,10 +14,10 @@ public class Puddle {
     /**
      * this is the song class constructor
      */
-    public Puddle(int imagesource, String artistName, String songName, String puddleShortDescription) {
+    public Puddle(int imagesource, String initiatorName, String puddlesName, String puddleShortDescription) {
         mIamgeResource = imagesource;
-        mpuddleInitiator = artistName;
-        mpuddleName = songName;
+        mpuddleInitiator = initiatorName;
+        mpuddleName = puddlesName;
         muddleShortDescription = puddleShortDescription; }
     /**@return song image resource*/
     public int getPuddleIamgeResource() { return mIamgeResource; }
