@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class PuddleAdapter extends ArrayAdapter<Puddle> {
@@ -16,13 +18,13 @@ public class PuddleAdapter extends ArrayAdapter<Puddle> {
          * Create a new {@link PuddleAdapter} object.
          *
          * @param context is the current context (i.e. Activity) that the adapter is being created in.
-         * @param song is the list of {@link Puddle}s to be displayed.
+         * @param puddles is the list of {@link Puddle}s to be displayed.
          */
-        public PuddleAdapter(Context context, ArrayList<Puddle> song) {
-            super(context, 0, song);
+        public PuddleAdapter(Context context, ArrayList<Puddle> puddles) {
+            super(context, 0, puddles);
         }
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, @NotNull ViewGroup parent) {
             // Check if an existing view is being reused, otherwise inflate the view
             View listItemView = convertView;
             if (listItemView == null) {

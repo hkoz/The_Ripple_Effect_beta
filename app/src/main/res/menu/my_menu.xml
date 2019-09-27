@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/find_new_puddle" android:title="@string/find_new_puddle"></item>
+    <item android:id="@+id/profile" android:title="@string/my_profile"></item>
     <item android:id="@+id/create_new_ripple" android:title="@string/create_new_ripple"></item>
     <item android:id="@+id/create_new_puddle" android:title="@string/create_new_puddle"></item>
     <item android:id="@+id/logout" android:title="Logout"></item>

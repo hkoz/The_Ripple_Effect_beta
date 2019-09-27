@@ -13,9 +13,9 @@
     <string name="failed_log_in"> Failed to log in\nplease check your username or password</string>
     <string name="signed_up">Signed Up Successfully, welcome</string>
     <string name="failed_sign_up"> Failed to sign up\nplease check your username or password</string>
-    <string name="find_new_puddle">Find a new puddle</string>
+    <string name="my_profile">Profile</string>
     <string name="log_out"> Log out</string>
-    <string name="create_new_puddle"> Create a new puddle</string>
+    <string name="create_new_puddle">Form a new puddle</string>
     <string name="create_new_ripple">Create a new ripple</string>
     <string name="puddle_name">Puddle title: </string>
     <string name="puddle_initiator_name">Initiator name: </string>
