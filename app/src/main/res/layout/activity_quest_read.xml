@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
@@ -19,8 +20,7 @@
 
             <TextView
                 android:id="@+id/puddle_name_text"
-                style="@style/label_style"
-                android:layout_weight="3" />
+                style="@style/text_style" />
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
@@ -32,8 +32,10 @@
 
             <TextView
                 android:id="@+id/date_text"
-                style="@style/label_style" />
+                style="@style/text_style" />
+
         </LinearLayout>
+
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
@@ -43,10 +45,10 @@
 
             <TextView
                 android:id="@+id/initiator_name_text"
-                style="@style/label_style"/>
-
+                style="@style/text_style" />
 
         </LinearLayout>
+
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
@@ -58,69 +60,75 @@
 
             <TextView
                 android:id="@+id/quest_text"
-                style="@style/label_style"
-                android:layout_weight="4" />
+                style="@style/text_style" />
         </LinearLayout>
 
 
         <LinearLayout
             style="@style/linear_layout_style"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/read_location_country_label"
                 style="@style/label_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:text="@string/country" />
 
             <TextView
-                android:id="@+id/read_location_country_text"
-                style="@style/label_style" />
+                android:id="@+id/location_country_text"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5" />
 
             <TextView
                 android:id="@+id/read_location_city_label"
                 style="@style/label_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:text="@string/City" />
 
             <TextView
-                android:id="@+id/read_location_city_text"
-                style="@style/label_style" />
+                android:id="@+id/location_city_text"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5" />
 
 
         </LinearLayout>
-        <Button
-            android:id="@+id/view_location_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/view_location"
-            android:layout_gravity="center_horizontal"
-            android:textSize="12sp"/>
+
 
         <LinearLayout style="@style/linear_layout_style">
 
+
             <TextView
-                android:id="@+id/read_number_created_label"
+                android:id="@+id/read_ripples_created_label"
                 style="@style/label_style"
-                android:text="@string/number_of_ripples_created"
-                tools:layout_editor_absoluteX="58dp"
-                tools:layout_editor_absoluteY="356dp" />
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/ripples_created" />
 
             <TextView
-                android:id="@+id/no_ripples_created_text"
-                style="@style/label_style" />
-        </LinearLayout>
-        <LinearLayout style="@style/linear_layout_style">
+                android:id="@+id/ripples_created_text"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5" />
+
 
             <TextView
-                android:id="@+id/read_number_required_label"
+                android:id="@+id/read_ripples_required_label"
                 style="@style/label_style"
-                android:text="@string/ripples_required"
-                tools:layout_editor_absoluteX="52dp"
-                tools:layout_editor_absoluteY="406dp" />
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/ripples_required" />
 
             <TextView
-                android:id="@+id/no_required_ripple_text"
-                style="@style/label_style"/>
+                android:id="@+id/required_ripple_text"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                 />
+
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
@@ -134,7 +142,7 @@
 
             <TextView
                 android:id="@+id/type_text"
-                style="@style/label_style"/>
+                style="@style/text_style" />
         </LinearLayout>
 
 
@@ -149,96 +157,106 @@
 
             <TextView
                 android:id="@+id/Status_text"
-                style="@style/label_style"/>
+                style="@style/text_style" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/read_credibility_lable"
+                android:id="@+id/read_credibility_label"
                 style="@style/label_style"
-                android:text="@string/Credibility"
-                tools:layout_editor_absoluteX="54dp"
-                tools:layout_editor_absoluteY="468dp" />
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/credibility_boosts" />
 
             <TextView
                 android:id="@+id/credibility_text"
-                style="@style/label_style"/>
-        </LinearLayout>
-        <LinearLayout style="@style/linear_layout_style">
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5" />
 
             <TextView
-                android:id="@+id/read_reports_lable"
+                android:id="@+id/read_reports_label"
                 style="@style/label_style"
-                android:text="@string/Credibility"
-                tools:layout_editor_absoluteX="54dp"
-                tools:layout_editor_absoluteY="468dp" />
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/scam_reports" />
 
             <TextView
                 android:id="@+id/reports_text"
-                style="@style/label_style"/>
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5" />
         </LinearLayout>
-        <LinearLayout style="@style/linear_layout_style"
-            android:orientation="vertical"
+
+        <LinearLayout
+            style="@style/linear_layout_style"
             android:layout_height="0dp"
-            android:layout_weight="2">
+            android:layout_weight="2"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/read_details_label"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                style="@style/label_style"
                 android:text="@string/details"
-                />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/details_text"
+                style="@style/text_style"
                 android:layout_width="match_parent"
-                android:layout_height="14dp"
-                android:layout_weight="3"
-                android:paddingLeft="5dp"
+                android:maxLength="250"
+                android:maxLines="5"
                 android:scrollbarAlwaysDrawVerticalTrack="true"
                 tools:text="lgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkg" />
         </LinearLayout>
-        <LinearLayout style="@style/linear_layout_style"
+
+        <LinearLayout
+            android:id="@+id/read_image_container"
+            style="@style/linear_layout_style"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/read_images_label"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="@string/image" />
+                style="@style/label_style"
+                android:text="@string/image"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:scaleType="center"
+                    android:layout_weight="1"
                     android:clickable="true"
                     android:focusable="true"
+                    android:scaleType="center"
                     android:src="@drawable/common_google_signin_btn_text_light">
 
                 </ImageView>
+
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:scaleType="center"
+                    android:layout_weight="1"
                     android:clickable="true"
                     android:focusable="true"
+                    android:scaleType="center"
                     android:src="@drawable/common_google_signin_btn_text_light">
 
                 </ImageView>
+
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:scaleType="center"
+                    android:layout_weight="1"
                     android:clickable="true"
                     android:focusable="true"
+                    android:scaleType="center"
                     android:src="@drawable/common_google_signin_btn_text_light">
 
                 </ImageView>
@@ -247,36 +265,38 @@
 
         <LinearLayout
             style="?android:attr/buttonBarStyle"
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center">
 
             <Button
-                style="?android:attr/buttonBarButtonStyle"
-                android:id="@+id/boost_credibility_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/boost_credibility" />
-
-            <Button
-                style="?android:attr/buttonBarButtonStyle"
                 android:id="@+id/accept_quest_button"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
                 android:text="@string/Accept" />
+            <Button
+                android:id="@+id/view_location_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_location" />
 
             <Button
-                style="?android:attr/buttonBarButtonStyle"
                 android:id="@+id/report_spam_button"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:text="@string/boost_credibility"
+                />
+            <Button
+                android:id="@+id/boost_credibility_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/report_as_scam" />
 
 
         </LinearLayout>
     </LinearLayout>
-
 </ScrollView>

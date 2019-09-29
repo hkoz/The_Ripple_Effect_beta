@@ -31,12 +31,12 @@
     <string name="ripples_required">Ripples required: </string>
     <string name="ripples_created">Ripples created: </string>
     <string name="Credibility">Credibility: </string>
-    <string name="boost_credibility">Boost credibility</string>
+    <string name="boost_credibility">Encourage</string>
     <string name="credibility_boosts"> Credibility boosts: </string>
-    <string name="report_as_scam">Report as scam</string>
+    <string name="report_as_scam">Report</string>
     <string name="scam_reports">Scam reports: </string>
     <string name="image"> Images: </string>
-    <string name="view">View</string>
+    <string name="detail">Details</string>
     <string name="my_puddles">My puddles</string>
     <string name="my_ripples">My ripples</string>
     <string name="add_location">Add location</string>

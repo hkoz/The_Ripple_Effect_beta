@@ -98,26 +98,19 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/view_location_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/add_location"
-            android:textSize="12sp" />
 
         <LinearLayout style="@style/linear_layout_style">
 
 
             <TextView
-                android:id="@+id/write_number_created_label"
+                android:id="@+id/write_ripples_created_label"
                 style="@style/label_style"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="@string/ripples_created" />
 
             <EditText
-                android:id="@+id/edit_no_ripples_created_text"
+                android:id="@+id/edit_ripples_created_text"
                 style="@style/text_style"
                 android:layout_width="0dp"
                 android:layout_weight="1.5"
@@ -125,14 +118,14 @@
 
 
             <TextView
-                android:id="@+id/write_number_required_label"
+                android:id="@+id/write_ripples_required_label"
                 style="@style/label_style"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="@string/ripples_required" />
 
             <EditText
-                android:id="@+id/edit_no_required_ripple_text"
+                android:id="@+id/edit_required_ripple_text"
                 style="@style/text_style"
                 android:layout_width="0dp"
                 android:layout_weight="1.5"
@@ -225,6 +218,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/read_image_container"
             style="@style/linear_layout_style"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -281,23 +275,23 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/boost_credibility_button"
+                android:id="@+id/add_location_button"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/boost_credibility" />
+                android:text="@string/add_location" />
 
             <Button
-                android:id="@+id/accept_quest_button"
+                android:id="@+id/form_new_puddle_button"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="@string/Accept" />
+                android:text="@string/create_new_puddle" />
 
             <Button
-                android:id="@+id/report_spam_button"
+                android:id="@+id/add_images_button"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
