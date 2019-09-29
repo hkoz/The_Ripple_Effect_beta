@@ -26,20 +26,6 @@
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_date_label"
-                style="@style/label_style"
-                android:text="@string/date_created" />
-
-            <EditText
-                android:id="@+id/date_edit_text"
-                style="@style/text_style"
-                android:inputType="datetime" />
-
-        </LinearLayout>
-
-        <LinearLayout style="@style/linear_layout_style">
-
-            <TextView
                 android:id="@+id/write_initiator_name_title"
                 style="@style/label_style"
                 android:text="@string/puddle_initiator_name" />
@@ -135,31 +121,36 @@
 
         <LinearLayout style="@style/linear_layout_style">
 
-            <TextView
-                android:id="@+id/write_type_label"
-                style="@style/label_style"
-                android:text="@string/type"
-                tools:layout_editor_absoluteX="50dp"
-                tools:layout_editor_absoluteY="539dp" />
 
-            <EditText
-                android:id="@+id/edit_type_text"
-                style="@style/text_style" />
         </LinearLayout>
 
 
         <LinearLayout style="@style/linear_layout_style">
+            <TextView
+                android:id="@+id/write_type_label"
+                style="@style/label_style"
+                android:text="@string/type"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/edit_type_text"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"/>
 
             <TextView
                 android:id="@+id/write_status_label"
                 style="@style/label_style"
                 android:text="@string/status"
-                tools:layout_editor_absoluteX="56dp"
-                tools:layout_editor_absoluteY="117dp" />
+                android:layout_width="0dp"
+                android:layout_weight="1" />
 
             <EditText
                 android:id="@+id/edit_Status_text"
-                style="@style/text_style" />
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"/>
 
         </LinearLayout>
 

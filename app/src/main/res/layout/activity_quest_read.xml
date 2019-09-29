@@ -131,33 +131,33 @@
 
         </LinearLayout>
 
-        <LinearLayout style="@style/linear_layout_style">
 
+        <LinearLayout style="@style/linear_layout_style">
             <TextView
                 android:id="@+id/read_type_label"
                 style="@style/label_style"
                 android:text="@string/type"
-                tools:layout_editor_absoluteX="50dp"
-                tools:layout_editor_absoluteY="539dp" />
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/type_text"
-                style="@style/text_style" />
-        </LinearLayout>
-
-
-        <LinearLayout style="@style/linear_layout_style">
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"/>
 
             <TextView
                 android:id="@+id/read_status_label"
                 style="@style/label_style"
                 android:text="@string/status"
-                tools:layout_editor_absoluteX="56dp"
-                tools:layout_editor_absoluteY="117dp" />
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/Status_text"
-                style="@style/text_style" />
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"/>
 
         </LinearLayout>
 
