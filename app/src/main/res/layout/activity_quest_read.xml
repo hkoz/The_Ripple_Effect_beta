@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -224,13 +223,11 @@
                 android:text="@string/image"
                 android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/read_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:clickable="true"
                     android:focusable="true"
@@ -238,29 +235,6 @@
                     android:src="@drawable/common_google_signin_btn_text_light">
 
                 </ImageView>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:scaleType="center"
-                    android:src="@drawable/common_google_signin_btn_text_light">
-
-                </ImageView>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:scaleType="center"
-                    android:src="@drawable/common_google_signin_btn_text_light">
-
-                </ImageView>
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout

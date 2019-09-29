@@ -46,11 +46,11 @@ public class Puddle {
 
 
     /**the class constructor*/
-    public Puddle(int imagesource, String initiatorName,  String puddlesName,  String puddleQuest, String puddleStatus,
-                  String puddleType,  String puddleCountryLocation, String puddleCityLocation,
-                  int puddleRequiredRipples, int puddleCreatedRipples, Array puddleHeroes,
+    public Puddle(int imageSource, String puddlesName, String initiatorName, String puddleQuest,
+                  String puddleCountryLocation, String puddleCityLocation,
+                  int puddleRequiredRipples, int puddleCreatedRipples, String puddleType,String puddleStatus,
                   int puddleCredibilityBoostsNumber, int puddleCredibilityReportsNumber,  String puddleDetails) {
-        miamgeResource = imagesource;
+        miamgeResource = imageSource;
         mpuddleInitiator = initiatorName;
         mpuddleName = puddlesName;
         mpuddleDateCreated = getCurrentDate();
@@ -61,13 +61,10 @@ public class Puddle {
         mpuddleCityLocation = puddleCityLocation;
         mpuddleRequiredRipples = puddleRequiredRipples;
         mpuddleCreatedRipples = puddleCreatedRipples;
-        mpuddleHeroes = puddleHeroes;
         mpuddleCredibilityBoostsNumber = puddleCredibilityBoostsNumber;
         mpuddleCredibilityReportsNumber = puddleCredibilityReportsNumber;
         mpuddleDetails = puddleDetails;}
 
-
-        public Puddle() {}
 
     public int getImageResource() { return miamgeResource; }
 

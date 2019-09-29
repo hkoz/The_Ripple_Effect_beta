@@ -12,15 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import static android.os.Build.VERSION_CODES.O;
 
 public class MyPuddlesFragment extends Fragment {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -37,19 +38,32 @@ public class MyPuddlesFragment extends Fragment {
         puddlesList = new ArrayList<>();
         puddlesListView = rootview.findViewById(R.id.list_of_puddles_listView);
         puddlesListView.setAdapter(new PuddleAdapter(getActivity(), puddlesList));
-        puddleItem = new Puddle();
-        database.getReference().child("Puddles").child("Puddle1").addValueEventListener(new ValueEventListener() {
+       DatabaseReference ref = (DatabaseReference) database.getReference().child("Puddles").addChildEventListener(new ChildEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                puddleItem  = (Puddle) dataSnapshot.getValue();
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                puddleItem = new Puddle(-1,
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString(),
+                        dataSnapshot.child("PNK").getValue().toString());
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) { }
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) { }
         });
-        puddlesList.add(puddleItem);
-        puddlesList.add(puddleItem);
-        puddlesList.add(puddleItem);
 
        puddlesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            @Override

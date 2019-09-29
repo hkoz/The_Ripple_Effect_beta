@@ -18,7 +18,7 @@ public class PuddleAdapter extends ArrayAdapter<Puddle> {
          * Create a new {@link PuddleAdapter} object.
          *
          * @param context is the current context (i.e. Activity) that the adapter is being created in.
-         * @param puddles is the list of {@link Puddle}s to be displayed.
+         * @param puddles is the valuesList of {@link Puddle}s to be displayed.
          */
         public PuddleAdapter(Context context, ArrayList<Puddle> puddles) {
             super(context, 0, puddles);
@@ -31,7 +31,7 @@ public class PuddleAdapter extends ArrayAdapter<Puddle> {
                 listItemView = LayoutInflater.from(getContext()).inflate(
                         R.layout.puddle_list_item, parent, false);
             }
-            // Get the {@link Puddle} object located at this position in the list
+            // Get the {@link Puddle} object located at this position in the valuesList
             Puddle currentPuddle = getItem(position);
             // Find the TextView in the list_item.xml layout with the ID puddle_initiator_name.
             TextView initiatorName =  listItemView.findViewById(R.id.puddle_initiator_name);
@@ -65,7 +65,7 @@ public class PuddleAdapter extends ArrayAdapter<Puddle> {
                 // Otherwise hide the ImageView (set visibility to GONE)
                 puddleImage.setVisibility(View.GONE);
             }
-            // Return the whole list item layout (containing 3 TextViews) so that it can be shown in
+            // Return the whole valuesList item layout (containing 3 TextViews) so that it can be shown in
             // the ListView.
             return listItemView;
         }

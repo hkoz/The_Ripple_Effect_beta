@@ -225,6 +225,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/write_image_view"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -235,27 +236,6 @@
 
                 </ImageView>
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:scaleType="center"
-                    android:src="@drawable/common_google_signin_btn_text_light">
-
-                </ImageView>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:scaleType="center"
-                    android:src="@drawable/common_google_signin_btn_text_light">
-
-                </ImageView>
             </LinearLayout>
         </LinearLayout>
 
@@ -279,7 +259,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="@string/create_new_puddle" />
+                android:text="@string/create_new_puddle"
+                android:onClick="formNewPuddleButtonPressed"/>
 
             <Button
                 android:id="@+id/add_images_button"
@@ -287,7 +268,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/add_image" />
+                android:text="@string/add_image"
+                android:onClick="addImagesClicked"/>
 
 
         </LinearLayout>
