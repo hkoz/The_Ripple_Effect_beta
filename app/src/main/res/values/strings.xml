@@ -28,11 +28,13 @@
     <string name="Finish">Finish</string>
     <string name="Ongoing">Ongoing</string>
     <string name="Finished">Finished</string>
-    <string name="number_of_ripples_required">Number of ripples required: </string>
-    <string name="number_of_ripples_created">Number of ripples created: </string>
+    <string name="ripples_required">Ripples required: </string>
+    <string name="ripples_created">Ripples created: </string>
     <string name="Credibility">Credibility: </string>
     <string name="boost_credibility">Boost credibility</string>
+    <string name="credibility_boosts"> Credibility boosts: </string>
     <string name="report_as_scam">Report as scam</string>
+    <string name="scam_reports">Scam reports: </string>
     <string name="image"> Images: </string>
     <string name="view">View</string>
     <string name="my_puddles">My puddles</string>

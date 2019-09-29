@@ -37,7 +37,6 @@ public class PuddleAdapter extends ArrayAdapter<Puddle> {
             TextView initiatorName =  listItemView.findViewById(R.id.puddle_initiator_name);
             // Get the initiator name from the currentPuddle object and set this text on
             // the initiator_name TextView.
-            assert currentPuddle != null;
             initiatorName.setText(currentPuddle.getPuddleInitiator());
             // Find the TextView in the list_item.xml layout with the ID puddle_name.
             TextView puddleName =  listItemView.findViewById(R.id.puddle_name_edit);

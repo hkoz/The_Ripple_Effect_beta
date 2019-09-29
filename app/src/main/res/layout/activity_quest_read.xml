@@ -114,7 +114,7 @@
             <TextView
                 android:id="@+id/read_number_required_label"
                 style="@style/label_style"
-                android:text="@string/number_of_ripples_required"
+                android:text="@string/ripples_required"
                 tools:layout_editor_absoluteX="52dp"
                 tools:layout_editor_absoluteY="406dp" />
 
