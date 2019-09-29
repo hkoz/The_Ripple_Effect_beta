@@ -17,6 +17,7 @@ class LogInActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        title = getString(R.string.log_in)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
         emailEditText = findViewById(R.id.email_edit_text)

@@ -35,32 +35,38 @@ public class PuddleAdapter extends ArrayAdapter<Puddle> {
             Puddle currentPuddle = getItem(position);
             // Find the TextView in the list_item.xml layout with the ID puddle_initiator_name.
             TextView initiatorName =  listItemView.findViewById(R.id.puddle_initiator_name);
-            // Get the artist name from the currentPuddle object and set this text on
+            // Get the initiator name from the currentPuddle object and set this text on
             // the initiator_name TextView.
-            initiatorName.setText(currentPuddle.getPuddleInitiatorName());
+            assert currentPuddle != null;
+            initiatorName.setText(currentPuddle.getPuddleInitiator());
             // Find the TextView in the list_item.xml layout with the ID puddle_name.
-            TextView puddleName =  listItemView.findViewById(R.id.puddle_name);
-            // Get the artist name from the currentPuddle object and set this text on
+            TextView puddleName =  listItemView.findViewById(R.id.puddle_name_edit);
+            // Get the puddle name from the currentPuddle object and set this text on
             // the puddle_name TextView.
             puddleName.setText(currentPuddle.getPuddleName());
-            // Find the TextView in the list_item.xml layout with the ID puddle_short_description.
-            TextView puddleShortDescription =  listItemView.findViewById(R.id.puddle_short_description);
-            // Get the artist name from the currentPuddle object and set this text on
-            // the puddle_name TextView.
-            puddleShortDescription.setText(currentPuddle.getPuddleShortDiscription());
+            // Find the TextView in the list_item.xml layout with the ID puddle_quest.
+            TextView puddleQuest =  listItemView.findViewById(R.id.puddle_quest);
+            // Get the puddle quest from the currentPuddle object and set this text on
+            // the puddle_quest TextView.
+            puddleQuest.setText(currentPuddle.getPuddleQuest());
+            // Find the TextView in the list_item.xml layout with the ID puddle_status.
+            TextView puddleStatus =  listItemView.findViewById(R.id.puddle_status);
+            // Get the puddle quest from the currentPuddle object and set this text on
+            // the puddle_quest TextView.
+            puddleStatus.setText(currentPuddle.getPuddleStatus());
             // Find the ImageView in the list_item.xml layout with the ID puddle_image.
             ImageView puddleImage =  listItemView.findViewById(R.id.puddle_image);
             // Check if an image is provided for this word or not
             if (currentPuddle.puddleHasImage()) {
                 // If an image is available, display the provided image based on the resource ID
-                puddleImage.setImageResource(currentPuddle.getPuddleIamgeResource());
+                puddleImage.setImageResource(currentPuddle.getImageResource());
                 // Make sure the view is visible
                 puddleImage.setVisibility(View.VISIBLE);
             } else {
                 // Otherwise hide the ImageView (set visibility to GONE)
                 puddleImage.setVisibility(View.GONE);
             }
-            // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
+            // Return the whole list item layout (containing 3 TextViews) so that it can be shown in
             // the ListView.
             return listItemView;
         }

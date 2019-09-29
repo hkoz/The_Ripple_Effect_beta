@@ -13,48 +13,53 @@
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_puddle_title_label"
+                android:id="@+id/read_puddle_title_label"
                 style="@style/label_style"
                 android:text="@string/puddle_name" />
 
-            <EditText
-                android:id="@+id/edit_puddle_name_text"
-                style="@style/text_style"
+            <TextView
+                android:id="@+id/puddle_name_text"
+                style="@style/label_style"
                 android:layout_weight="3" />
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_date_label"
+                android:id="@+id/read_date_label"
                 style="@style/label_style"
                 android:text="@string/date_created" />
 
-            style="@style/text_style"        </LinearLayout>
+            <TextView
+                android:id="@+id/date_text"
+                style="@style/label_style" />
+        </LinearLayout>
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_initiator_name_title"
+                android:id="@+id/read_initiator_name_title"
                 style="@style/label_style"
                 android:text="@string/puddle_initiator_name" />
 
-            <EditText
-                android:id="@+id/edit_initiator_name_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/initiator_name_text"
+                style="@style/label_style"/>
+
 
         </LinearLayout>
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_quest_label"
+                android:id="@+id/read_quest_label"
                 style="@style/label_style"
                 android:text="@string/Quest"
                 tools:layout_editor_absoluteX="58dp"
                 tools:layout_editor_absoluteY="222dp" />
 
-            <EditText
-                android:id="@+id/edit_quest_text"
-                style="@style/text_style"                android:layout_weight="4" />
+            <TextView
+                android:id="@+id/quest_text"
+                style="@style/label_style"
+                android:layout_weight="4" />
         </LinearLayout>
 
 
@@ -64,22 +69,22 @@
             android:layout_weight="1.5">
 
             <TextView
-                android:id="@+id/write_location_country_label"
+                android:id="@+id/read_location_country_label"
                 style="@style/label_style"
                 android:text="@string/country" />
 
-            <EditText
-                android:id="@+id/edit_location_country_text"
-                style="@style/text_style" />
+            <TextView
+                android:id="@+id/read_location_country_text"
+                style="@style/label_style" />
 
             <TextView
-                android:id="@+id/write_location_city_label"
+                android:id="@+id/read_location_city_label"
                 style="@style/label_style"
                 android:text="@string/City" />
 
-            <EditText
-                android:id="@+id/edit_location_city_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/read_location_city_text"
+                style="@style/label_style" />
 
 
         </LinearLayout>
@@ -87,91 +92,91 @@
             android:id="@+id/view_location_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/add_location"
+            android:text="@string/view_location"
             android:layout_gravity="center_horizontal"
             android:textSize="12sp"/>
 
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_number_created_label"
+                android:id="@+id/read_number_created_label"
                 style="@style/label_style"
                 android:text="@string/number_of_ripples_created"
                 tools:layout_editor_absoluteX="58dp"
                 tools:layout_editor_absoluteY="356dp" />
 
-            <EditText
-                android:id="@+id/edit_no_ripples_created_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/no_ripples_created_text"
+                style="@style/label_style" />
         </LinearLayout>
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_number_required_label"
+                android:id="@+id/read_number_required_label"
                 style="@style/label_style"
                 android:text="@string/number_of_ripples_required"
                 tools:layout_editor_absoluteX="52dp"
                 tools:layout_editor_absoluteY="406dp" />
 
-            <EditText
-                android:id="@+id/edit_no_required_ripple_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/no_required_ripple_text"
+                style="@style/label_style"/>
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_type_label"
+                android:id="@+id/read_type_label"
                 style="@style/label_style"
                 android:text="@string/type"
                 tools:layout_editor_absoluteX="50dp"
                 tools:layout_editor_absoluteY="539dp" />
 
-            <EditText
-                android:id="@+id/edit_type_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/type_text"
+                style="@style/label_style"/>
         </LinearLayout>
 
 
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_status_label"
+                android:id="@+id/read_status_label"
                 style="@style/label_style"
                 android:text="@string/status"
                 tools:layout_editor_absoluteX="56dp"
                 tools:layout_editor_absoluteY="117dp" />
 
-            <EditText
-                android:id="@+id/edit_Status_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/Status_text"
+                style="@style/label_style"/>
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_credibility_lable"
+                android:id="@+id/read_credibility_lable"
                 style="@style/label_style"
                 android:text="@string/Credibility"
                 tools:layout_editor_absoluteX="54dp"
                 tools:layout_editor_absoluteY="468dp" />
 
-            <EditText
-                android:id="@+id/edit_credibility_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/credibility_text"
+                style="@style/label_style"/>
         </LinearLayout>
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_reports_label"
+                android:id="@+id/read_reports_lable"
                 style="@style/label_style"
                 android:text="@string/Credibility"
                 tools:layout_editor_absoluteX="54dp"
                 tools:layout_editor_absoluteY="468dp" />
 
-            <EditText
-                android:id="@+id/edit_reports_text"
-                style="@style/text_style"/>
+            <TextView
+                android:id="@+id/reports_text"
+                style="@style/label_style"/>
         </LinearLayout>
         <LinearLayout style="@style/linear_layout_style"
             android:orientation="vertical"
@@ -179,19 +184,18 @@
             android:layout_weight="2">
 
             <TextView
-                android:id="@+id/write_details_label"
+                android:id="@+id/read_details_label"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="@string/details"
                 />
 
-            <EditText
-                android:id="@+id/edit_details_text"
+            <TextView
+                android:id="@+id/details_text"
                 android:layout_width="match_parent"
-                style="@style/text_style"
+                android:layout_height="14dp"
+                android:layout_weight="3"
                 android:paddingLeft="5dp"
-                android:maxLength="250"
-                android:maxLines="5"
                 android:scrollbarAlwaysDrawVerticalTrack="true"
                 tools:text="lgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkglgglhglkglhgkghgkg" />
         </LinearLayout>
@@ -200,7 +204,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/write_images_label"
+                android:id="@+id/read_images_label"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:text="@string/image" />
@@ -269,7 +273,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/add_image" />
+                android:text="@string/report_as_scam" />
 
 
         </LinearLayout>

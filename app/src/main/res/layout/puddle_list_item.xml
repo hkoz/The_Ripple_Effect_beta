@@ -26,52 +26,81 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:baselineAligned="false"
-                        android:text="@string/puddle_initiator_name" />
-                    <TextView
-                        android:id="@+id/puddle_initiator_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tool:text="Blah Blah" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
+                        style="@style/label_style"
+                        android:id="@+id/puddle_name_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/puddle_name" />
                     <TextView
-                        android:id="@+id/puddle_name"
+                        android:id="@+id/puddle_name_edit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tool:text="shit" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/label_style"
+                            android:id="@+id/puddle_initiator_name_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:text="@string/puddle_initiator_name" />
+                        <TextView
+                            android:id="@+id/puddle_initiator_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tool:text="Blah Blah" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/label_style"
+                            android:id="@+id/puddle_status_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:text="@string/status" />
+                        <TextView
+                            android:id="@+id/puddle_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="3"
+                            android:maxLength="100"
+                            tool:text="Blah Blah" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
+                        style="@style/label_style"
+                        android:id="@+id/puddle_quest_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:baselineAligned="false"
-                        android:text="@string/puddle_short_description" />
+                        android:text="@string/Quest" />
                     <TextView
-                        android:id="@+id/puddle_short_description"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/puddle_quest"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="3"
                         android:maxLength="100"
-                        tool:text="Blah Blah" />
+                        tool:text="Blah Blah"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"/>
                 </LinearLayout>
             </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/view"/>
     </LinearLayout>
 </FrameLayout>
