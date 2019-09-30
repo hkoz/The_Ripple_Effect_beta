@@ -247,7 +247,6 @@
 
             <Button
                 android:id="@+id/add_location_button"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -255,7 +254,6 @@
 
             <Button
                 android:id="@+id/form_new_puddle_button"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -264,7 +262,6 @@
 
             <Button
                 android:id="@+id/add_images_button"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

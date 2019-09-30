@@ -47,4 +47,19 @@
     <string name="country">Country: </string>
     <string name="City">City: </string>
     <string name="add_image">Add images</string>
+
+    <string name="puddleNameKey">PNK</string>
+    <string name="initiatorKey">INK</string>
+    <string name="questKey">QDK</string>
+    <string name="countryKey">CoLK</string>
+    <string name="cityKey">CiLK</string>
+    <string name="reqRipplesKey">RRK</string>
+    <string name="createdRipplesKey">RCK</string>
+    <string name="typeKey">TDK</string>
+    <string name="statusKey">SDK</string>
+    <string name="credibilityKey">CBK</string>
+    <string name="reportsKey">RSK</string>
+    <string name="detailsKey">DDK</string>
+    <string name="title_activity_maps">Map</string>
+
 </resources>

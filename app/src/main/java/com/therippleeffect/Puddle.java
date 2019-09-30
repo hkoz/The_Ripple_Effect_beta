@@ -29,17 +29,17 @@ public class Puddle {
     /** a string representing the puddle's details*/
     private String mpuddleDetails;
     /** a Integer representing the puddle's number of required ripples*/
-    private int mpuddleRequiredRipples;
+    private String mpuddleRequiredRipples;
     /** a Integer representing the puddle's number of required ripples*/
-    private int mpuddleCreatedRipples;
+    private String mpuddleCreatedRipples;
     /** a string representing the puddle's country location*/
     private String mpuddleCountryLocation;
     /** a string representing the puddle city location*/
     private String mpuddleCityLocation;
     /** a Integer representing the puddle's credibility*/
-    private int mpuddleCredibilityBoostsNumber;
+    private String mpuddleCredibilityBoostsNumber;
     /** a Integer representing the puddle's reports*/
-    private int mpuddleCredibilityReportsNumber;
+    private String mpuddleCredibilityReportsNumber;
     /** a Array representing the puddle's heros*/
     private Array mpuddleHeroes;
 
@@ -48,8 +48,8 @@ public class Puddle {
     /**the class constructor*/
     public Puddle(int imageSource, String puddlesName, String initiatorName, String puddleQuest,
                   String puddleCountryLocation, String puddleCityLocation,
-                  int puddleRequiredRipples, int puddleCreatedRipples, String puddleType,String puddleStatus,
-                  int puddleCredibilityBoostsNumber, int puddleCredibilityReportsNumber,  String puddleDetails) {
+                  String puddleRequiredRipples, String puddleCreatedRipples, String puddleType, String puddleStatus,
+                  String puddleCredibilityBoostsNumber, String puddleCredibilityReportsNumber, String puddleDetails) {
         miamgeResource = imageSource;
         mpuddleInitiator = initiatorName;
         mpuddleName = puddlesName;
@@ -86,15 +86,15 @@ public class Puddle {
 
     public String getPuddleCityLocation() { return mpuddleCityLocation; }
 
-    public int getPuddleRequiredRipples() { return mpuddleRequiredRipples; }
+    public String getPuddleRequiredRipples() { return mpuddleRequiredRipples; }
 
-    public int getPuddleCreatedRipples() { return mpuddleCreatedRipples; }
+    public String getPuddleCreatedRipples() { return mpuddleCreatedRipples; }
 
     public Array getPuddleHeroes() { return mpuddleHeroes; }
 
-    public int getPuddleCredibilityBoostsNumber() { return mpuddleCredibilityBoostsNumber; }
+    public String getPuddleCredibilityBoostsNumber() { return mpuddleCredibilityBoostsNumber; }
 
-    public int getPuddleCredibilityReportsNumber() { return mpuddleCredibilityReportsNumber; }
+    public String getPuddleCredibilityReportsNumber() { return mpuddleCredibilityReportsNumber; }
 
     public String getPuddleDetails() { return mpuddleDetails; }
 
@@ -116,16 +116,16 @@ public class Puddle {
 
     public void setPuddleCityLocation(String mpuddleCityLocation) { this.mpuddleCityLocation = mpuddleCityLocation; }
 
-    public void setPuddleRequiredRipples(int mpuddleRequiredRipples) { this.mpuddleRequiredRipples = mpuddleRequiredRipples; }
+    public void setPuddleRequiredRipples(String mpuddleRequiredRipples) { this.mpuddleRequiredRipples = mpuddleRequiredRipples; }
 
-    public void setPuddleCreatedRipples(int mpuddleCreatedRipples) { this.mpuddleCreatedRipples = mpuddleCreatedRipples; }
+    public void setPuddleCreatedRipples(String mpuddleCreatedRipples) { this.mpuddleCreatedRipples = mpuddleCreatedRipples; }
 
     public void setMpuddleHeroes(Array mpuddleHeroes) { this.mpuddleHeroes = mpuddleHeroes;}
 
-    public void setMpuddleCredibilityBoostsNumber(int mpuddleCredibilityBoostsNumber) {
+    public void setMpuddleCredibilityBoostsNumber(String mpuddleCredibilityBoostsNumber) {
         this.mpuddleCredibilityBoostsNumber = mpuddleCredibilityBoostsNumber; }
 
-    public void setMpuddleCredibilityReportsNumber(int mpuddleCredibilityReportsNumber) {
+    public void setMpuddleCredibilityReportsNumber(String mpuddleCredibilityReportsNumber) {
         this.mpuddleCredibilityReportsNumber = mpuddleCredibilityReportsNumber; }
 
     public void setPuddleDetails(String mpuddledetails) { this.mpuddleDetails = mpuddledetails; }
@@ -134,7 +134,7 @@ public class Puddle {
 
         Calendar calendar = Calendar.getInstance();
         Date now = calendar.getTime();
-        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("'Date: yyyy-MM-dd' Time: 'HH:mm:ssZZZ", Locale.getDefault());
+        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("'Date:' yyyy-MM-dd' Time: 'HH:mm:ssZZZ", Locale.getDefault());
         return simpleDateFormat.format(now);
     }
     @Override

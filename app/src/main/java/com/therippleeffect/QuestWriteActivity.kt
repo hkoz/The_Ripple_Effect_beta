@@ -1,6 +1,5 @@
 package com.therippleeffect
 
-import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -8,24 +7,14 @@ import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.UploadTask
 import java.io.ByteArrayOutputStream
 import java.util.*
-import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
 
 
 @Suppress("DEPRECATION")
@@ -43,26 +32,19 @@ class QuestWriteActivity : AppCompatActivity() {
     var reports: EditText?=null
     var details: EditText? = null
     var image1:ImageView?=null
-    var puddleNameKey = "PNK"
-    var initiatorKey = "INK"
-    var questKey = "QDK"
-    var countryKey = "CLK"
-    var cityKey = "CLK"
-    var ripplesRKeys = "RRK"
-    var ripplesCKey ="RCK"
-    var typeKey = "TDK"
-    var statusKey ="SDK"
-    var credibilityKey ="CBK"
-    var reportsKey = "RSK"
-    var detailsKey = "DDK"
-    var valuesList: MutableList<EditText?> = mutableListOf()
-    var keysList: MutableList<String> = mutableListOf()
+
     val imageName = UUID.randomUUID().toString() + ".webp"
-    var database = FirebaseDatabase.getInstance()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         title = getString(R.string.create_new_puddle)
         image1 =findViewById(R.id.write_image_view)
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_quest_write)
+    }
+
+    fun formNewPuddleButtonPressed (view :View) {
         puddleName=findViewById(R.id.edit_puddle_name_text)
         initiator=findViewById(R.id.edit_initiator_name_text)
         quest=findViewById(R.id.edit_quest_text)
@@ -76,52 +58,29 @@ class QuestWriteActivity : AppCompatActivity() {
         reports=findViewById(R.id.edit_reports_text)
         details=findViewById(R.id.edit_details_text)
 
-        valuesList.clear()
-        valuesList.add(puddleName!!)
-        valuesList.add(initiator!!)
-        valuesList.add(quest!!)
-        valuesList.add(countryLocation!!)
-        valuesList.add(cityLocation!!)
-        valuesList.add(requiredRipples!!)
-        valuesList.add(createdRipples!!)
-        valuesList.add(type!!)
-        valuesList.add(status!!)
-        valuesList.add(credibility!!)
-        valuesList.add(reports!!)
-        valuesList.add(details!!)
-        keysList.add(puddleNameKey)
-        keysList.add(initiatorKey)
-        keysList.add(questKey)
-        keysList.add(countryKey)
-        keysList.add(cityKey)
-        keysList.add(ripplesRKeys)
-        keysList.add(ripplesCKey)
-        keysList.add(typeKey)
-        keysList.add(statusKey)
-        keysList.add(credibilityKey)
-        keysList.add(reportsKey)
-        keysList.add(detailsKey)
+        val map: Map<String, String> = mapOf(
 
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quest_write)
+            getString(R.string.puddleNameKey) to puddleName?.text.toString(),
+            getString(R.string.initiatorKey) to initiator?.text.toString(),
+            getString(R.string.questKey) to quest?.text.toString(),
+            getString(R.string.countryKey) to countryLocation?.text.toString(),
+            getString(R.string.cityKey) to cityLocation?.text.toString(),
+            getString(R.string.reqRipplesKey) to requiredRipples?.text.toString(),
+            getString(R.string.createdRipplesKey) to createdRipples?.text.toString(),
+            getString(R.string.typeKey) to type?.text.toString(),
+            getString(R.string.statusKey) to status?.text.toString(),
+            getString(R.string.credibilityKey) to credibility?.text.toString(),
+            getString(R.string.reportsKey) to reports?.text.toString(),
+            getString(R.string.detailsKey) to details?.text.toString()
+        )
+
+        val database = FirebaseDatabase.getInstance()
+        val myRef = database.getReference("Puddles")
+        myRef.push().setValue(map)
+
     }
 
-    fun formNewPuddleButtonPressed (view :View){
-        val createdPuddle = database.getReference("Puddles")
-        createdPuddle.push().setValue(createStringArrayfromThePage(keysList,valuesList))
-        }
 
-    fun createStringArrayfromThePage (keysList:MutableList<String>, valuesList: MutableList<EditText?>) :HashMap<String,String> {
-
-        val resultMap :HashMap <String,String> = HashMap()
-        for (i in 0 .. valuesList.size) {
-            var value =""
-            if (valuesList[i] == null){}
-            else  value = valuesList[i]?.text.toString()
-            resultMap.put(keysList[i], value )
-        }
-        return resultMap
-    }
 
     fun getPhoto() {
         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
