@@ -217,7 +217,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/add_location" />
+                android:text="@string/add_location"
+                android:onClick="futureFeature"/>
 
             <Button
                 android:id="@+id/form_new_puddle_button"
@@ -233,7 +234,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/add_image"
-                android:onClick="addImagesClicked"/>
+                android:onClick="futureFeature"/>
 
 
         </LinearLayout>

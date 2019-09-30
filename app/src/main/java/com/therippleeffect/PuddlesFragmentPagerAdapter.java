@@ -14,17 +14,20 @@ public class PuddlesFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position==0){ return new MyPuddlesFragment();}
-        else return new MyRipplesFragment();
+        else if (position==1){return new MyRipplesFragment();}
+        else return new SearchForPuddles();
     }
 
     @Override
-    public int getCount() {return 2;}
+    public int getCount() {return 3;}
 
     @Override
     public CharSequence getPageTitle(int position) {
         if (position==0){
             return "My Puddles";
         }
-        else return "My Ripples";
+        else if (position ==1)
+            return "My Ripples";
+        else return "Search for new Puddles";
     }
 }

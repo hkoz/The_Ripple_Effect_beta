@@ -3,7 +3,9 @@ package com.therippleeffect;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AcceptQuestActivity extends AppCompatActivity {
 
@@ -56,4 +58,10 @@ public class AcceptQuestActivity extends AppCompatActivity {
         details.setText(getIntent().getStringExtra(getString(R.string.detailsKey)));
 
     }
+    private void futureFeature(View view){
+        Toast.makeText(this,getString(R.string.no_function), Toast.LENGTH_SHORT).show();
+    }
+
+
+
 }

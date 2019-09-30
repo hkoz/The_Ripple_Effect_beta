@@ -47,6 +47,15 @@
     <string name="country">Country: </string>
     <string name="City">City: </string>
     <string name="add_image">Add images</string>
+    <string name="no_name">Add the puddle name </string>
+    <string name="no_quest">Add the puddle quest </string>
+    <string name="no_country">Add the puddle country location </string>
+    <string name="no_city">Add the puddle city location </string>
+    <string name="no_ripples">Add the puddle required ripples </string>
+    <string name="no_type">Add the puddle type </string>
+    <string name="no_status">Add the puddle status </string>
+    <string name="no_details">Add the puddles details </string>
+    <string name="no_function"> This feature will be added in future update</string>
 
     <string name="puddleNameKey">PNK</string>
     <string name="initiatorKey">INK</string>
@@ -62,5 +71,6 @@
     <string name="detailsKey">DDK</string>
     <string name="dateKey">DCK</string>
     <string name="title_activity_maps">Map</string>
+
 
 </resources>

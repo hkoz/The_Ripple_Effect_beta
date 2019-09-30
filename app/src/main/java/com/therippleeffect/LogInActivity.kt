@@ -8,6 +8,16 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
+import java.util.*
+import com.google.android.gms.tasks.Task
+import com.google.android.gms.tasks.OnCompleteListener
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.util.Log
+import androidx.fragment.app.FragmentActivity
+
 
 class LogInActivity : AppCompatActivity() {
     val mauth = FirebaseAuth.getInstance()
@@ -44,8 +54,19 @@ class LogInActivity : AppCompatActivity() {
     fun signup(view: View) {
         var email = emailEditText?.text.toString()
         var password = passwordEditText?.text.toString()
-        if (emailEditText!= null && passwordEditText!=null && email != "" && password != "") mauth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { Task ->
+        if (emailEditText!= null && passwordEditText!=null && email != "" && password != "")
+            mauth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { Task ->
             if (Task.isSuccessful){
+                val user = mauth.currentUser
+
+                val profileUpdates = UserProfileChangeRequest.Builder()
+                    .setDisplayName(UUID.randomUUID().toString()).build()
+                user?.updateProfile(profileUpdates)?.addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+
+                    }
+                }
+
                 logInTrue = false
                 enterAsMember()
 

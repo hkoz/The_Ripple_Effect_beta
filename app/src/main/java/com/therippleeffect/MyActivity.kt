@@ -17,7 +17,7 @@ class MyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my)
         val vp = findViewById<ViewPager>(R.id.viewPager)
-        val puddlesFragmentPagerAdapter = PuddlesFragmentPagerAdapter(applicationContext, supportFragmentManager)
+        val puddlesFragmentPagerAdapter = PuddlesFragmentPagerAdapter(this, supportFragmentManager)
         vp.adapter = puddlesFragmentPagerAdapter
         val tab = findViewById<TabLayout>(R.id.tableLayout)
         tab.setupWithViewPager(vp)
@@ -31,8 +31,6 @@ class MyActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.create_new_puddle -> startActivity(Intent(this@MyActivity,QuestWriteActivity::class.java))
-            R.id.create_new_ripple -> startActivity(Intent(this@MyActivity,PuddleSearchActivity::class.java))
-            R.id.profile ->startActivity(Intent(this@MyActivity,ProfileActivity::class.java))
             R.id.logout -> {mauth.signOut()
                 startActivity(Intent(this@MyActivity,LogInActivity::class.java))}
         }

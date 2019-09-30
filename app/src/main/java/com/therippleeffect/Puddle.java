@@ -134,7 +134,7 @@ public class Puddle {
 
         Calendar calendar = Calendar.getInstance();
         Date now = calendar.getTime();
-        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("yyyy-MM-dd' Time: 'HH:mm:ssZ", Locale.getDefault());
+        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("yyyy-MM-dd' Time: 'HH:mm:ss", Locale.getDefault());
         return simpleDateFormat.format(now);
     }
     @Override

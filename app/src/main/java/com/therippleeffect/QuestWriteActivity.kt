@@ -34,7 +34,7 @@ class QuestWriteActivity : AppCompatActivity() {
     var details: EditText? = null
     var image1:ImageView?=null
 
-    val imageName = UUID.randomUUID().toString() + ".webp"
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,63 +76,45 @@ class QuestWriteActivity : AppCompatActivity() {
             getString(R.string.dateKey) to Puddle.getCurrentDate()
         )
 
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("Puddles")
-        myRef.push().setValue(map)
-        Log.i("Map", map.toString())
-        startActivity(Intent(this,MyActivity::class.java))
 
-    }
-
-
-
-    fun getPhoto() {
-        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        startActivityForResult(intent, 1)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        val selectedImage = data!!.data
-
-        if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
-            try {
-                val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, selectedImage)
-                image1?.setImageBitmap(bitmap)
-            } catch (e: Exception) {
-                e.printStackTrace()
+        if (puddleName?.text.toString() != null && puddleName?.text.toString().isNotEmpty()){
+            if (quest?.text.toString() != null && quest?.text.toString().isNotEmpty()){
+                if (countryLocation?.text.toString() != null && countryLocation?.text.toString().isNotEmpty()){
+                    if (cityLocation?.text.toString() != null && cityLocation?.text.toString().isNotEmpty()){
+                        if (requiredRipples?.text.toString() != null && requiredRipples?.text.toString().isNotEmpty()){
+                            if (type?.text.toString() != null && type?.text.toString().isNotEmpty()){
+                                if (status?.text.toString() != null && status?.text.toString().isNotEmpty()){
+                                    if (details?.text.toString() != null && details?.text.toString().isNotEmpty()){
+                                        val database = FirebaseDatabase.getInstance()
+                                        val myRef = database.getReference("Puddles")
+                                        myRef.push().setValue(map)
+                                        Log.i("Map", map.toString())
+                                        startActivity(Intent(this,MyActivity::class.java))
+                                    }
+                                    else {Toast.makeText(this,getString(R.string.no_details),Toast.LENGTH_SHORT).show()}
+                                }
+                                else {Toast.makeText(this,getString(R.string.no_status),Toast.LENGTH_SHORT).show()}
+                            }
+                            else {Toast.makeText(this,getString(R.string.no_type),Toast.LENGTH_SHORT).show()}
+                        }
+                        else {Toast.makeText(this,getString(R.string.no_ripples),Toast.LENGTH_SHORT).show()}
+                    }
+                    else {Toast.makeText(this,getString(R.string.no_city),Toast.LENGTH_SHORT).show()}
+                }
+                else {Toast.makeText(this,getString(R.string.no_country),Toast.LENGTH_SHORT).show()}
             }
-
+            else {Toast.makeText(this,getString(R.string.no_quest),Toast.LENGTH_SHORT).show()}
         }
+        else {Toast.makeText(this,getString(R.string.no_name),Toast.LENGTH_SHORT).show()}
+
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
-        if (requestCode == 1) {
-            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                getPhoto()
-            }
-        }
+    fun futureFeature(view : View){
+        Toast.makeText(this,getString(R.string.no_function),Toast.LENGTH_SHORT).show()
     }
 
-    fun addImagesClicked(view: View) {
-
-        image1?.isDrawingCacheEnabled = true
-        image1?.buildDrawingCache()
-        val bitmap = image1?.drawingCache
-        val baos = ByteArrayOutputStream()
-        bitmap?.compress(Bitmap.CompressFormat.WEBP, 100, baos)
-        val data = baos.toByteArray()
 
 
 
-        val uploadTask = FirebaseStorage.getInstance().reference.child("images").child(imageName).putBytes(data)
-        uploadTask.addOnFailureListener {
-            // Handle unsuccessful uploads
-            Toast.makeText(this,"UploadFailed", Toast.LENGTH_SHORT).show()
-        }
-
-    }
 }
