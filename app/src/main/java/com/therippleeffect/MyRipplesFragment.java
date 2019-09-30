@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MyRipplesFragment extends Fragment {
 
@@ -38,19 +39,19 @@ public class MyRipplesFragment extends Fragment {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 String keyofnewChild = dataSnapshot.getKey();
                 puddleItem = new Puddle(-1,
-                        dataSnapshot.child(getString(R.string.puddleNameKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.initiatorKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.questKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.countryKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.cityKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.reqRipplesKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.createdRipplesKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.typeKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.statusKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.credibilityKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.reportsKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.detailsKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.dateKey)).getValue().toString());
+                        dataSnapshot.child(Objects.requireNonNull(getActivity()).getResources().getString(R.string.puddleNameKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.initiatorKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.questKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.countryKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.cityKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.reqRipplesKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.createdRipplesKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.typeKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.statusKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.credibilityKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.reportsKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.detailsKey)).getValue().toString(),
+                        dataSnapshot.child(getActivity().getResources().getString(R.string.dateKey)).getValue().toString());
                 puddlesList.add(puddleItem);
                 puddleAdapter.notifyDataSetChanged();
             }
@@ -69,19 +70,19 @@ public class MyRipplesFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Puddle puddle = puddlesList.get(i);
                 Intent readQuestIntent = new Intent(getContext(), AcceptQuestActivity.class);
-                readQuestIntent.putExtra(getString(R.string.puddleNameKey), puddle.getPuddleName());
-                readQuestIntent.putExtra(getString(R.string.initiatorKey), puddle.getPuddleInitiator());
-                readQuestIntent.putExtra(getString(R.string.questKey), puddle.getPuddleQuest());
-                readQuestIntent.putExtra(getString(R.string.countryKey), puddle.getPuddleCountryLocation());
-                readQuestIntent.putExtra(getString(R.string.cityKey), puddle.getPuddleCityLocation());
-                readQuestIntent.putExtra(getString(R.string.reqRipplesKey), puddle.getPuddleRequiredRipples());
-                readQuestIntent.putExtra(getString(R.string.createdRipplesKey), puddle.getPuddleCreatedRipples());
-                readQuestIntent.putExtra(getString(R.string.typeKey), puddle.getPuddleType());
-                readQuestIntent.putExtra(getString(R.string.statusKey), puddle.getPuddleStatus());
-                readQuestIntent.putExtra(getString(R.string.credibilityKey), puddle.getPuddleCredibilityBoostsNumber());
-                readQuestIntent.putExtra(getString(R.string.reportsKey), puddle.getPuddleCredibilityReportsNumber());
-                readQuestIntent.putExtra(getString(R.string.detailsKey), puddle.getPuddleDetails());
-                readQuestIntent.putExtra(getString(R.string.dateKey),puddle.getPuddleDateCreated());
+                readQuestIntent.putExtra(Objects.requireNonNull(getActivity()).getResources().getString(R.string.puddleNameKey), puddle.getPuddleName());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.initiatorKey), puddle.getPuddleInitiator());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.questKey), puddle.getPuddleQuest());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.countryKey), puddle.getPuddleCountryLocation());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.cityKey), puddle.getPuddleCityLocation());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.reqRipplesKey), puddle.getPuddleRequiredRipples());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.createdRipplesKey), puddle.getPuddleCreatedRipples());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.typeKey), puddle.getPuddleType());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.statusKey), puddle.getPuddleStatus());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.credibilityKey), puddle.getPuddleCredibilityBoostsNumber());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.reportsKey), puddle.getPuddleCredibilityReportsNumber());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.detailsKey), puddle.getPuddleDetails());
+                readQuestIntent.putExtra(getActivity().getResources().getString(R.string.dateKey),puddle.getPuddleDateCreated());
 
                 startActivity(readQuestIntent);
             }

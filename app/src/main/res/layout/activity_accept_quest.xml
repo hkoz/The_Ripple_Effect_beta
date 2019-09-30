@@ -19,7 +19,7 @@
 
             <TextView
                 android:id="@+id/puddle_name_text"
-                style="@style/label_style" />
+                style="@style/text_style" />
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">

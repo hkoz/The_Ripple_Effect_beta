@@ -80,6 +80,7 @@ class QuestWriteActivity : AppCompatActivity() {
         val myRef = database.getReference("Puddles")
         myRef.push().setValue(map)
         Log.i("Map", map.toString())
+        startActivity(Intent(this,MyActivity::class.java))
 
     }
 
