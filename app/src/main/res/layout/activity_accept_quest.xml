@@ -70,28 +70,21 @@
             <TextView
                 android:id="@+id/read_location_country_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/country" />
 
             <TextView
                 android:id="@+id/location_country_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5" />
+                style="@style/text_style" />
 
             <TextView
                 android:id="@+id/read_location_city_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/City" />
 
             <TextView
                 android:id="@+id/location_city_text"
                 style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5" />
+                />
 
 
         </LinearLayout>
@@ -103,30 +96,21 @@
             <TextView
                 android:id="@+id/read_ripples_created_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/ripples_created" />
 
             <TextView
                 android:id="@+id/ripples_created_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5" />
+                style="@style/text_style" />
 
 
             <TextView
                 android:id="@+id/read_ripples_required_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/ripples_required" />
 
             <TextView
                 android:id="@+id/required_ripple_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
-                />
+                style="@style/text_style" />
 
         </LinearLayout>
 
@@ -135,28 +119,20 @@
             <TextView
                 android:id="@+id/read_type_label"
                 style="@style/label_style"
-                android:text="@string/type"
-                android:layout_width="0dp"
-                android:layout_weight="1"/>
+                android:text="@string/type" />
 
             <TextView
                 android:id="@+id/type_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"/>
+                style="@style/text_style" />
 
             <TextView
                 android:id="@+id/read_status_label"
                 style="@style/label_style"
-                android:text="@string/status"
-                android:layout_width="0dp"
-                android:layout_weight="1"/>
+                android:text="@string/status" />
 
             <TextView
                 android:id="@+id/Status_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"/>
+                style="@style/text_style" />
 
         </LinearLayout>
 
@@ -165,28 +141,20 @@
             <TextView
                 android:id="@+id/read_credibility_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/credibility_boosts" />
 
             <TextView
                 android:id="@+id/credibility_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5" />
+                style="@style/text_style" />
 
             <TextView
                 android:id="@+id/read_reports_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/scam_reports" />
 
             <TextView
                 android:id="@+id/reports_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5" />
+                style="@style/text_style" />
         </LinearLayout>
 
         <LinearLayout

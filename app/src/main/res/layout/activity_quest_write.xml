@@ -52,36 +52,29 @@
 
 
         <LinearLayout
-            style="@style/linear_layout_style"
-            android:layout_height="wrap_content">
+            style="@style/linear_layout_style">
 
             <TextView
                 android:id="@+id/write_location_country_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/country" />
 
             <EditText
                 android:id="@+id/edit_location_country_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5" />
+                style="@style/text_style" />
 
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/linear_layout_style">
             <TextView
                 android:id="@+id/write_location_city_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="@string/City" />
+                android:text="@string/City"/>
 
             <EditText
                 android:id="@+id/edit_location_city_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5" />
-
-
+                style="@style/text_style" />
         </LinearLayout>
 
 
@@ -91,32 +84,25 @@
             <TextView
                 android:id="@+id/write_ripples_created_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/ripples_created" />
 
             <EditText
                 android:id="@+id/edit_ripples_created_text"
                 style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
                 android:inputType="number" />
 
-
+        </LinearLayout>
+        <LinearLayout
+            style="@style/linear_layout_style">
             <TextView
                 android:id="@+id/write_ripples_required_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/ripples_required" />
 
             <EditText
                 android:id="@+id/edit_required_ripple_text"
                 style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
                 android:inputType="number" />
-
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
@@ -129,28 +115,20 @@
             <TextView
                 android:id="@+id/write_type_label"
                 style="@style/label_style"
-                android:text="@string/type"
-                android:layout_width="0dp"
-                android:layout_weight="1" />
+                android:text="@string/type" />
 
             <EditText
                 android:id="@+id/edit_type_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"/>
+                style="@style/text_style" />
 
             <TextView
                 android:id="@+id/write_status_label"
                 style="@style/label_style"
-                android:text="@string/status"
-                android:layout_width="0dp"
-                android:layout_weight="1" />
+                android:text="@string/status" />
 
             <EditText
                 android:id="@+id/edit_Status_text"
-                style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"/>
+                style="@style/text_style" />
 
         </LinearLayout>
 
@@ -159,36 +137,26 @@
             <TextView
                 android:id="@+id/write_credibility_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/credibility_boosts" />
 
             <EditText
                 android:id="@+id/edit_credibility_text"
                 style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
                 android:inputType="number" />
 
             <TextView
                 android:id="@+id/write_reports_label"
                 style="@style/label_style"
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:text="@string/scam_reports" />
 
             <EditText
                 android:id="@+id/edit_reports_text"
                 style="@style/text_style"
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
                 android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
             style="@style/linear_layout_style"
-            android:layout_height="0dp"
-            android:layout_weight="2"
             android:orientation="vertical">
 
             <TextView
@@ -210,9 +178,7 @@
 
         <LinearLayout
             android:id="@+id/read_image_container"
-            style="@style/linear_layout_style"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            style="@style/linear_layout_style">
 
             <TextView
                 android:id="@+id/write_images_label"
@@ -246,6 +212,7 @@
             android:gravity="center">
 
             <Button
+
                 android:id="@+id/add_location_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
