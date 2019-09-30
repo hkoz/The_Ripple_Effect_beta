@@ -52,7 +52,8 @@ public class MyPuddlesFragment extends Fragment {
                         dataSnapshot.child(getString(R.string.statusKey)).getValue().toString(),
                         dataSnapshot.child(getString(R.string.credibilityKey)).getValue().toString(),
                         dataSnapshot.child(getString(R.string.reportsKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.detailsKey)).getValue().toString());
+                        dataSnapshot.child(getString(R.string.detailsKey)).getValue().toString(),
+                        dataSnapshot.child(getString(R.string.dateKey)).getValue().toString());
                 puddlesList.add(puddleItem);
                 puddleAdapter.notifyDataSetChanged();
             }
@@ -70,22 +71,21 @@ public class MyPuddlesFragment extends Fragment {
            @Override
            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                Puddle puddle = puddlesList.get(i);
-               Intent readQuestIntent = new Intent(getContext(), QuestReadActivity.class);
+               Intent readQuestIntent = new Intent(getContext(), AcceptQuestActivity.class);
                readQuestIntent.putExtra(getString(R.string.puddleNameKey), puddle.getPuddleName());
                readQuestIntent.putExtra(getString(R.string.initiatorKey), puddle.getPuddleInitiator());
                readQuestIntent.putExtra(getString(R.string.questKey), puddle.getPuddleQuest());
                readQuestIntent.putExtra(getString(R.string.countryKey), puddle.getPuddleCountryLocation());
                readQuestIntent.putExtra(getString(R.string.cityKey), puddle.getPuddleCityLocation());
                readQuestIntent.putExtra(getString(R.string.reqRipplesKey), puddle.getPuddleRequiredRipples());
-               readQuestIntent.putExtra(getString(R.string.ripples_created), puddle.getPuddleCreatedRipples());
+               readQuestIntent.putExtra(getString(R.string.createdRipplesKey), puddle.getPuddleCreatedRipples());
                readQuestIntent.putExtra(getString(R.string.typeKey), puddle.getPuddleType());
                readQuestIntent.putExtra(getString(R.string.statusKey), puddle.getPuddleStatus());
                readQuestIntent.putExtra(getString(R.string.credibilityKey), puddle.getPuddleCredibilityBoostsNumber());
                readQuestIntent.putExtra(getString(R.string.reportsKey), puddle.getPuddleCredibilityReportsNumber());
                readQuestIntent.putExtra(getString(R.string.detailsKey), puddle.getPuddleDetails());
+               readQuestIntent.putExtra(getString(R.string.dateKey),puddle.getPuddleDateCreated());
 
-
-               readQuestIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                startActivity(readQuestIntent);
            }
        });

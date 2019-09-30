@@ -49,7 +49,7 @@ public class Puddle {
     public Puddle(int imageSource, String puddlesName, String initiatorName, String puddleQuest,
                   String puddleCountryLocation, String puddleCityLocation,
                   String puddleRequiredRipples, String puddleCreatedRipples, String puddleType, String puddleStatus,
-                  String puddleCredibilityBoostsNumber, String puddleCredibilityReportsNumber, String puddleDetails) {
+                  String puddleCredibilityBoostsNumber, String puddleCredibilityReportsNumber, String puddleDetails, String dateCreated) {
         miamgeResource = imageSource;
         mpuddleInitiator = initiatorName;
         mpuddleName = puddlesName;
@@ -63,7 +63,8 @@ public class Puddle {
         mpuddleCreatedRipples = puddleCreatedRipples;
         mpuddleCredibilityBoostsNumber = puddleCredibilityBoostsNumber;
         mpuddleCredibilityReportsNumber = puddleCredibilityReportsNumber;
-        mpuddleDetails = puddleDetails;}
+        mpuddleDetails = puddleDetails;
+        mpuddleDateCreated = dateCreated;}
 
 
     public int getImageResource() { return miamgeResource; }
@@ -134,7 +135,7 @@ public class Puddle {
 
         Calendar calendar = Calendar.getInstance();
         Date now = calendar.getTime();
-        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("'Date:' yyyy-MM-dd' Time: 'HH:mm:ssZZZ", Locale.getDefault());
+        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("yyyy-MM-dd' Time: 'HH:mm:ssZ", Locale.getDefault());
         return simpleDateFormat.format(now);
     }
     @Override

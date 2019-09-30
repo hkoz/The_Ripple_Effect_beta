@@ -60,6 +60,7 @@
     <string name="credibilityKey">CBK</string>
     <string name="reportsKey">RSK</string>
     <string name="detailsKey">DDK</string>
+    <string name="dateKey">DCK</string>
     <string name="title_activity_maps">Map</string>
 
 </resources>

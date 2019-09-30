@@ -7,6 +7,7 @@ import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
@@ -71,12 +72,14 @@ class QuestWriteActivity : AppCompatActivity() {
             getString(R.string.statusKey) to status?.text.toString(),
             getString(R.string.credibilityKey) to credibility?.text.toString(),
             getString(R.string.reportsKey) to reports?.text.toString(),
-            getString(R.string.detailsKey) to details?.text.toString()
+            getString(R.string.detailsKey) to details?.text.toString(),
+            getString(R.string.dateKey) to Puddle.getCurrentDate()
         )
 
         val database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("Puddles")
         myRef.push().setValue(map)
+        Log.i("Map", map.toString())
 
     }
 
