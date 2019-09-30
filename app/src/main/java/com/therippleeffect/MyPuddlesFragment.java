@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,6 +23,7 @@ import java.util.Objects;
 
 
 public class MyPuddlesFragment extends Fragment {
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     private ArrayList<Puddle> puddlesList;
     private View rootview;
@@ -41,6 +43,8 @@ public class MyPuddlesFragment extends Fragment {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 String keyofnewChild = dataSnapshot.getKey();
+                if ( dataSnapshot.child(getActivity().getResources().getString(R.string.initiatorKey)).getValue().toString() ==
+                        mAuth.getCurrentUser().getUid()){
                 puddleItem = new Puddle(-1,
                         dataSnapshot.child(Objects.requireNonNull(getActivity()).getResources().getString(R.string.puddleNameKey)).getValue().toString(),
                         dataSnapshot.child(getActivity().getResources().getString(R.string.initiatorKey)).getValue().toString(),
@@ -56,7 +60,7 @@ public class MyPuddlesFragment extends Fragment {
                         dataSnapshot.child(getActivity().getResources().getString(R.string.detailsKey)).getValue().toString(),
                         dataSnapshot.child(getActivity().getResources().getString(R.string.dateKey)).getValue().toString());
                 puddlesList.add(puddleItem);
-                puddleAdapter.notifyDataSetChanged();
+                puddleAdapter.notifyDataSetChanged();}
             }
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }

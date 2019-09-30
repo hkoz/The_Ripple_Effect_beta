@@ -26,19 +26,6 @@
         <LinearLayout style="@style/linear_layout_style">
 
             <TextView
-                android:id="@+id/write_initiator_name_title"
-                style="@style/label_style"
-                android:text="@string/puddle_initiator_name" />
-
-            <EditText
-                android:id="@+id/edit_initiator_name_text"
-                style="@style/text_style" />
-
-        </LinearLayout>
-
-        <LinearLayout style="@style/linear_layout_style">
-
-            <TextView
                 android:id="@+id/write_quest_label"
                 style="@style/label_style"
                 android:text="@string/Quest"
@@ -49,7 +36,6 @@
                 android:id="@+id/edit_quest_text"
                 style="@style/text_style" />
         </LinearLayout>
-
 
         <LinearLayout
             style="@style/linear_layout_style">
@@ -76,22 +62,6 @@
                 android:id="@+id/edit_location_city_text"
                 style="@style/text_style" />
         </LinearLayout>
-
-
-        <LinearLayout style="@style/linear_layout_style">
-
-
-            <TextView
-                android:id="@+id/write_ripples_created_label"
-                style="@style/label_style"
-                android:text="@string/ripples_created" />
-
-            <EditText
-                android:id="@+id/edit_ripples_created_text"
-                style="@style/text_style"
-                android:inputType="number" />
-
-        </LinearLayout>
         <LinearLayout
             style="@style/linear_layout_style">
             <TextView
@@ -106,10 +76,7 @@
         </LinearLayout>
 
         <LinearLayout style="@style/linear_layout_style">
-
-
         </LinearLayout>
-
 
         <LinearLayout style="@style/linear_layout_style">
             <TextView
@@ -130,29 +97,6 @@
                 android:id="@+id/edit_Status_text"
                 style="@style/text_style" />
 
-        </LinearLayout>
-
-        <LinearLayout style="@style/linear_layout_style">
-
-            <TextView
-                android:id="@+id/write_credibility_label"
-                style="@style/label_style"
-                android:text="@string/credibility_boosts" />
-
-            <EditText
-                android:id="@+id/edit_credibility_text"
-                style="@style/text_style"
-                android:inputType="number" />
-
-            <TextView
-                android:id="@+id/write_reports_label"
-                style="@style/label_style"
-                android:text="@string/scam_reports" />
-
-            <EditText
-                android:id="@+id/edit_reports_text"
-                style="@style/text_style"
-                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
