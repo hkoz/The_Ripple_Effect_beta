@@ -43,7 +43,7 @@ public class AcceptQuestActivity extends AppCompatActivity {
 
         puddleName.setText(getIntent().getStringExtra(getString(R.string.puddleNameKey)));
         initiator.setText(getIntent().getStringExtra(getString(R.string.initiatorKey)));
-        dateCreated.setText(getIntent().getStringExtra("date"));
+        dateCreated.setText(getIntent().getStringExtra(getString(R.string.dateKey)));
         quest.setText(getIntent().getStringExtra(getString(R.string.questKey)));
         countryLocation.setText(getIntent().getStringExtra(getString(R.string.countryKey)));
         cityLocation.setText(getIntent().getStringExtra(getString(R.string.cityKey)));

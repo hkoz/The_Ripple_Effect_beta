@@ -49,7 +49,8 @@ public class MyRipplesFragment extends Fragment {
                         dataSnapshot.child(getString(R.string.statusKey)).getValue().toString(),
                         dataSnapshot.child(getString(R.string.credibilityKey)).getValue().toString(),
                         dataSnapshot.child(getString(R.string.reportsKey)).getValue().toString(),
-                        dataSnapshot.child(getString(R.string.detailsKey)).getValue().toString());
+                        dataSnapshot.child(getString(R.string.detailsKey)).getValue().toString(),
+                        dataSnapshot.child(getString(R.string.dateKey)).getValue().toString());
                 puddlesList.add(puddleItem);
                 puddleAdapter.notifyDataSetChanged();
             }
@@ -74,13 +75,13 @@ public class MyRipplesFragment extends Fragment {
                 readQuestIntent.putExtra(getString(R.string.countryKey), puddle.getPuddleCountryLocation());
                 readQuestIntent.putExtra(getString(R.string.cityKey), puddle.getPuddleCityLocation());
                 readQuestIntent.putExtra(getString(R.string.reqRipplesKey), puddle.getPuddleRequiredRipples());
-                readQuestIntent.putExtra(getString(R.string.ripples_created), puddle.getPuddleCreatedRipples());
+                readQuestIntent.putExtra(getString(R.string.createdRipplesKey), puddle.getPuddleCreatedRipples());
                 readQuestIntent.putExtra(getString(R.string.typeKey), puddle.getPuddleType());
                 readQuestIntent.putExtra(getString(R.string.statusKey), puddle.getPuddleStatus());
                 readQuestIntent.putExtra(getString(R.string.credibilityKey), puddle.getPuddleCredibilityBoostsNumber());
                 readQuestIntent.putExtra(getString(R.string.reportsKey), puddle.getPuddleCredibilityReportsNumber());
                 readQuestIntent.putExtra(getString(R.string.detailsKey), puddle.getPuddleDetails());
-                readQuestIntent.putExtra("date",Puddle.getCurrentDate());
+                readQuestIntent.putExtra(getString(R.string.dateKey),puddle.getPuddleDateCreated());
 
                 startActivity(readQuestIntent);
             }

@@ -53,7 +53,6 @@ public class Puddle {
         miamgeResource = imageSource;
         mpuddleInitiator = initiatorName;
         mpuddleName = puddlesName;
-        mpuddleDateCreated = getCurrentDate();
         mpuddleQuest = puddleQuest;
         mpuddleStatus = puddleStatus;
         mpuddleType = puddleType;
